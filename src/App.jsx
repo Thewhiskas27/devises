@@ -15,7 +15,7 @@ function App() { // La fonction
         const fromC = document.getElementById('fromCurrency').value; // La devise qu'on veut convertir
         const toC = document.getElementById('toCurrency').value; // La devise qu'on veut avoir
         let result = amount * rates[fromC][toC]; // Le calcul permettant de convertir les devises
-        if (isNaN(amount) || amount <= 0)alert("Veuillez saisir des valeurs logiques sur les cases !"); // Validation d'entrées. Si on écrit n'importe quoi, le programme va vous le dire.
+        if (isNaN(amount) || amount < 0)alert("Veuillez saisir des valeurs logiques sur les cases !"); // Validation d'entrées. Si on écrit n'importe quoi, le programme va vous le dire.
         else if(fromC === toC)document.getElementById('result').textContent = `Result: ${amount} ${fromC}`; // Si les 2 devises saisies sont les mêmes, retourner la valeur de base.
         else document.getElementById('result').textContent = `Result: ${result} ${toC}`; // Retourne la l'argent dans la devise recherchée
     };
